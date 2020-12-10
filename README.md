@@ -15,3 +15,17 @@ Sure then running local server:
 
 ---
 ### STEP 2:
+Updating `settings.py` to use my Postresql, germs
+
+And migrating data `python3 manage.py migrate` 
+
+---
+### STEP 3:
+One time URL setup:
+
+`touch main_app/urls.py`
+
+And edit djangoGems project's `urls.py` to re-route all incoming paths to this new URL mapper.
+
+---
+### STEP 4:
