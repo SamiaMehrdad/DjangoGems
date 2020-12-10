@@ -29,3 +29,10 @@ And edit djangoGems project's `urls.py` to re-route all incoming paths to this n
 
 ---
 ### STEP 4:
+Defining `Home` route and related `view` function, edit `/main-app/view.py`
+
+---
+### STEP 5:
+Using Django Templates.
+
+`$ mkdir main_app/templates`
