@@ -12,3 +12,6 @@ Following official Django documents to create Django starter app:
 
 Sure then running local server:
 `$ python3 manage.py startapp main_app`
+
+---
+### STEP 2:
