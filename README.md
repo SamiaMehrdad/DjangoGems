@@ -36,3 +36,13 @@ Defining `Home` route and related `view` function, edit `/main-app/view.py`
 Using Django Templates.
 
 `$ mkdir main_app/templates`
+
+`touch main_app/templates/about.html`
+
+---
+### STEP 6:
+Using template Inheritance (Partials)
+
+`$ touch main_app/templates/base.html`
+
+Use [Django template tags](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ref-templates-builtins-tags) to extend `About` page from `Base` page.
