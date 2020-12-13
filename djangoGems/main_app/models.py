@@ -21,3 +21,5 @@ class Gem(models.Model):
   description = models.TextField(max_length=250)
   price_range = models.IntegerField()
   hardness = models.IntegerField()
+  def __str__(self):
+        return self.name + " the precious"

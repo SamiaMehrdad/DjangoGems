@@ -14,4 +14,5 @@ def about(request):
   return render(request, 'about.html')
 
 def gems_index(request):
+  gems = Gem.objects.all()
   return render(request, 'gems/index.html', { 'gems': gems })    

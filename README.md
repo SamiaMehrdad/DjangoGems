@@ -61,3 +61,18 @@ Make model in models.py, then template.
 
 `$ mkdir main_app/templates/gems`<br>
 `$ touch main_app/templates/gems/index.html`
+
+---
+### STEP 9:
+Define a Django Model for data entity
+
+Make and run migrations.<br>
+`$ python3 manage.py makemigrations`<br>
+`$ python3 manage.py migrate`
+
+Make some temp data in database using Django shell<br>
+`$python3 manage.py shell`
+And update views and models to work with real database. Also there is Admin functionality within Django which is more easy to use and powerful to manage our database.<br>
+`$ python3 manage.py createsuperuser`<br>
+And register our Models in the `admin.py`
+

@@ -6,7 +6,7 @@ echo Running server. Please wait...
 python3 manage.py runserver 
 fi
 if [ $1 = ? ] ; then
-echo 'USE ./run with m to migrate, with s to run server and with p to start postgretsql server'
+printf "............\n Use ./run [x]:\n m -to migrate\n s -to run server\n p -to start postgretsql server\n shell to run Django Python shell\n...........\n"
 fi
 if [ $1 = m ] ; then
 echo Migrating. Please wait...
@@ -16,4 +16,8 @@ fi
 if [ $1 = p ] ; then
 echo Starting PostgreSQL serice...
 sudo service postgresql start
+fi
+if [ $1 = shell ] ; then
+echo "Starting Django Python shell. Use exit() or quit() when done."
+python3 manage.py shell
 fi
