@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from .models import Gem, gems
+from .models import Gem
 
 # Create your views here.
-# Add the following import
-from django.http import HttpResponse
+
+# MSK: HttpResponse is not in use anymore, so we don't need its import either.
+# from django.http import HttpResponse
 
 # Define the home view
 def home(request):
