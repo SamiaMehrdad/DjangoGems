@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Gem List</h1>
+
+{% for gem in gems %}
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ gem.name }}</span>
+      <p>Color theme: {{ gem.theme }}</p>
+      <p>Description: {{ gem.description }}</p>
+      <p>Price class: {{ gem.priceRange }}</p>
+      <p>Hardness: {{ gem.hardness }}</p>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}

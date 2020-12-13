@@ -52,3 +52,12 @@ Including Static Files in a Template
 
 `$ mkdir main_app/static/css`<br>
 `$ touch main_app/static/css/style.css`
+
+---
+### STEP 8:
+Render Data in a Template
+
+Make model in models.py, then template.
+
+`$ mkdir main_app/templates/gems`<br>
+`$ touch main_app/templates/gems/index.html`
