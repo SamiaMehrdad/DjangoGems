@@ -8,12 +8,20 @@ body {
   
   main {
     flex: 1 0 auto;
-    color: #540;
-
+    color: #824;
+  }
+  
+  a{
+    color: #824;
   }
   
   footer.page-footer {
     padding-top: 0;
     text-align: right;
     
+  }
+
+  .card{
+    background-color:  #edb;
+    cursor: pointer;
   }

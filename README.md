@@ -76,3 +76,9 @@ And update views and models to work with real database. Also there is Admin func
 `$ python3 manage.py createsuperuser`<br>
 And register our Models in the `admin.py`
 
+---
+### STEP 10:
+Add a "Details" page
+
+`$ touch main_app/templates/gems/detail.html`<br>
+And make proper rout in `urls.py` and functions in `views.py`

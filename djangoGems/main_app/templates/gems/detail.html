@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>{{ gem.name }} Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ gem.name }}</span>
+    <p>Color theme: {{ gem.theme }}</p>
+    <p>Description: {{ gem.description }}</p>
+    {% if gem.price_range > 1 %}
+      <p>Price class: {{ gem.price_range }}</p>
+    {% else %}
+      <p>Not really expensive</p>
+    {% endif %}
+    <p>Hardness(1..10): {{ gem.hardness }}</p>
+  </div>
+</div>
+
+{% endblock %}

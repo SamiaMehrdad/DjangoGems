@@ -16,3 +16,7 @@ def about(request):
 def gems_index(request):
   gems = Gem.objects.all()
   return render(request, 'gems/index.html', { 'gems': gems })    
+
+def gems_detail(request, gem_id):
+  gem = Gem.objects.get(id=gem_id)
+  return render(request, 'gems/detail.html', { 'gem': gem })  
