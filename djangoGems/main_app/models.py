@@ -21,6 +21,16 @@ OWNERSHIP = (
   ('M', 'Museum'),
 )
 
+class Sell(models.Model):
+  shop_name = models.CharField(max_length=50)
+  city = models.CharField(max_length=50)
+
+
+  def __str__(self):
+    return f'{self.shop_name} of {self.city}'
+
+  def get_absolute_url(self):
+    return reverse('toys_detail', kwargs={'pk': self.id})
 class Gem(models.Model):
 
   name = models.CharField(max_length=50)
@@ -28,6 +38,8 @@ class Gem(models.Model):
   description = models.TextField(max_length=250)
   price_range = models.IntegerField()
   hardness = models.IntegerField()
+  # Add the M:M relationship
+  sells = models.ManyToManyField(Sell)
 
   def __str__(self):
         return self.name + " the precious"

@@ -104,7 +104,7 @@ After adding path and methods for update and delete, realize that Django needs a
 ---
 ### STEP 13:
 One-to-Many Models & Forms<br>
-Add famous pieces info for each type of gems
+Add Famous Pieces info for each type of gems
 
 After defining data model class, need to make migration:<br>
 `$ python3 manage.py makemigrations`<br>
@@ -118,3 +118,14 @@ Add the capability to add a new Famous Piece to a gem
 
 follow a best practice of defining the ModelForm inside of a `forms.py` module.<br>
 `$ touch main_app/forms.py`
+
+---
+### STEP 15:
+Many-To-Many Models & Forms<br>
+Add shopping info for each type of gems.
+
+After adding Sell class to `models.py`, there is no need to migrate data models:<br>
+`$ python3 manage.py makemigrations`<br>
+`$ python3 manage.py migrate`
+
+And also update `admin.py` to knows the new table.

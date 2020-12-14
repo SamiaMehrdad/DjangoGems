@@ -44,6 +44,26 @@
         </form>
     </div>
 </div>
+<hr>
+<div class="row">
+  <div class="col s6">
+    <h5>{{ gem.name }}'s Shopping</h5>
+    {% if gem.sells.count %}
+      {% for sell in gem.sells.all %}
+        <div class="card">
+          <div class="card-content">
+            <span >
+              Sell by {{ sell.shop_name }} of {{ sell.city }} 
+            </span>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <h5>No shopping information</h5>
+    {% endif %}
+  </div>
+  <!-- Available toys will come after this line -->
+</div>
 <script>
   const selectEl = document.getElementById('id_ownership');
   M.FormSelect.init(selectEl);

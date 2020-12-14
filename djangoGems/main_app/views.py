@@ -23,7 +23,8 @@ def gems_detail(request, gem_id):
   famous_form=FamousForm()
   return render(request, 'gems/detail.html', {
      'gem': gem,
-     'famous_form': famous_form
+     'famous_form': famous_form,
+     #'sells': gem.sells.all(),
       })  
 
 def add_famous(request, gem_id):
@@ -31,8 +32,6 @@ def add_famous(request, gem_id):
   form = FamousForm(request.POST)
   # validate the form
   if form.is_valid():
-    # don't save the form to the db until it
-    # has the cat_id assigned
     new_famous = form.save(commit=False)
     new_famous.gem_id = gem_id
     new_famous.save()
