@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>    
-    <div class="col s6"><h4>Famous ones</h4> 
+    <div class="col s6"><h4>Famous Pieces</h4> 
         <table class="striped">
           <thead>
             <tr><th>Name</th><th>Owner</th><th>Ownership</th></tr>
@@ -37,6 +37,15 @@
             {% endfor %}
           </tbody>
         </table>
+        <form action="{% url 'add_famous' gem.id %}" method="post">
+            {% csrf_token %}
+            {{ famous_form.as_p }}
+            <input type="submit" class="btn" value="Add A Famous piece">
+        </form>
     </div>
 </div>
+<script>
+  const selectEl = document.getElementById('id_ownership');
+  M.FormSelect.init(selectEl);
+</script>
 {% endblock %}

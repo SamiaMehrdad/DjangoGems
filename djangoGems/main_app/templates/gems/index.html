@@ -5,7 +5,7 @@
 
 {% for gem in gems %}
   <div class="card">
-    <a href="/gems/{{ gem.id }}">
+    <a href="{% url 'detail' gem.id %}">
       <div class="card-content">
         <span class="card-title">{{ gem.name }}</span>
         <p>Color theme: {{ gem.theme }}</p>

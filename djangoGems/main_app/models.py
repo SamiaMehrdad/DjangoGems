@@ -38,7 +38,7 @@ class Gem(models.Model):
 class Famous(models.Model):
   name = models.CharField(max_length=50)
   owner = models.CharField(max_length=50)
-  Ownership = models.CharField(
+  ownership = models.CharField(
                   'Type of ownership',
                   max_length=1, 
                   choices=OWNERSHIP, 

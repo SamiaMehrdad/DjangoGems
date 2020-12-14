@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Gem
-
+from .forms import FamousForm
 # Create your views here.
 
 # MSK: HttpResponse is not in use anymore, so we don't need its import either.
@@ -20,7 +20,23 @@ def gems_index(request):
 
 def gems_detail(request, gem_id):
   gem = Gem.objects.get(id=gem_id)
-  return render(request, 'gems/detail.html', { 'gem': gem })  
+  famous_form=FamousForm()
+  return render(request, 'gems/detail.html', {
+     'gem': gem,
+     'famous_form': famous_form
+      })  
+
+def add_famous(request, gem_id):
+    # create a ModelForm instance using the data in request.POST
+  form = FamousForm(request.POST)
+  # validate the form
+  if form.is_valid():
+    # don't save the form to the db until it
+    # has the cat_id assigned
+    new_famous = form.save(commit=False)
+    new_famous.gem_id = gem_id
+    new_famous.save()
+  return redirect('detail', gem_id=gem_id)
 
 class GemCreate(CreateView):
   model = Gem

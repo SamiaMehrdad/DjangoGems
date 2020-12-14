@@ -111,3 +111,10 @@ After defining data model class, need to make migration:<br>
 `$ python3 manage.py migrate`
 
 And also update `admin.py` to knows the new table.
+
+---
+### STEP 14:
+Add the capability to add a new Famous Piece to a gem
+
+follow a best practice of defining the ModelForm inside of a `forms.py` module.<br>
+`$ touch main_app/forms.py`
