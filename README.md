@@ -13,6 +13,8 @@ Following official Django documents to create Django starter app:
 Sure then running local server:
 `$ python3 manage.py startapp main_app`
 
+![](./djangoGems/main_app/static/images/django1.JPG)
+
 ---
 ### STEP 2:
 Updating `settings.py` to use my Postresql, germs
@@ -30,6 +32,8 @@ And edit djangoGems project's `urls.py` to re-route all incoming paths to this n
 ---
 ### STEP 4:
 Defining `Home` route and related `view` function, edit `/main-app/view.py`
+
+![](./djangoGems/main_app/static/images/django2.JPG)
 
 ---
 ### STEP 5:
@@ -62,6 +66,8 @@ Make model in models.py, then template.
 `$ mkdir main_app/templates/gems`<br>
 `$ touch main_app/templates/gems/index.html`
 
+![](./djangoGems/main_app/static/images/django3.JPG)
+
 ---
 ### STEP 9:
 Define a Django Model for data entity
@@ -83,6 +89,8 @@ Add a "Details" page
 `$ touch main_app/templates/gems/detail.html`<br>
 And make proper rout in `urls.py` and functions in `views.py`
 
+![](./djangoGems/main_app/static/images/django5.JPG)
+
 ---
 ### STEP 11:
 Implement Django class-based views
@@ -101,6 +109,8 @@ Update and Delete functionalities
 After adding path and methods for update and delete, realize that Django needs a delete confirmation form.<br>
 `$ touch main_app/templates/main_app/gem_confirm_delete.html`
 
+![](./djangoGems/main_app/static/images/django6.JPG)
+
 ---
 ### STEP 13:
 One-to-Many Models & Forms<br>
@@ -118,7 +128,6 @@ Add the capability to add a new Famous Piece to a gem
 
 follow a best practice of defining the ModelForm inside of a `forms.py` module.<br>
 `$ touch main_app/forms.py`
-
 ---
 ### STEP 15:
 Many-To-Many Models & Forms<br>
@@ -129,3 +138,5 @@ After adding Sell class to `models.py`, there is no need to migrate data models:
 `$ python3 manage.py migrate`
 
 And also update `admin.py` to knows the new table.
+
+![](./djangoGems/main_app/static/images/django7.JPG)
