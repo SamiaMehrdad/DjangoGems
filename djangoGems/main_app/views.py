@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import Gem
 
 # Create your views here.
@@ -20,3 +21,8 @@ def gems_index(request):
 def gems_detail(request, gem_id):
   gem = Gem.objects.get(id=gem_id)
   return render(request, 'gems/detail.html', { 'gem': gem })  
+
+class GemCreate(CreateView):
+  model = Gem
+  fields = '__all__'  
+  success_url = '/gems/'

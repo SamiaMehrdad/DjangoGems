@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 # class Gem:  # Note that parens are optional if not inheriting from another class
@@ -16,10 +17,15 @@ from django.db import models
 # ]
 
 class Gem(models.Model):
+
   name = models.CharField(max_length=50)
   theme = models.CharField(max_length=50)
   description = models.TextField(max_length=250)
   price_range = models.IntegerField()
   hardness = models.IntegerField()
+
   def __str__(self):
         return self.name + " the precious"
+
+  def get_absolute_url(self):
+    return reverse('detail', kwargs={'gem_id': self.id})      

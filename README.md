@@ -82,3 +82,14 @@ Add a "Details" page
 
 `$ touch main_app/templates/gems/detail.html`<br>
 And make proper rout in `urls.py` and functions in `views.py`
+
+---
+### STEP 11:
+Implement Django class-based views
+
+*Note: All CBVs by default will use a folder inside of the templates folder with a name the same as the app, in our case main_app.
+
+`$ mkdir main_app/templates/main_app`<br>
+`$ touch main_app/templates/main_app/cat_form.html`
+
+Use default Django `{{form.as_table}}` for data entry form.
