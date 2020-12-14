@@ -100,3 +100,14 @@ Update and Delete functionalities
 
 After adding path and methods for update and delete, realize that Django needs a delete confirmation form.<br>
 `$ touch main_app/templates/main_app/gem_confirm_delete.html`
+
+---
+### STEP 13:
+One-to-Many Models & Forms<br>
+Add famous pieces info for each type of gems
+
+After defining data model class, need to make migration:<br>
+`$ python3 manage.py makemigrations`<br>
+`$ python3 manage.py migrate`
+
+And also update `admin.py` to knows the new table.
