@@ -8,5 +8,6 @@ urlpatterns = [
     path('gems/<int:gem_id>/', views.gems_detail, name='detail'), #MSK: route to showing details page
     #MSK: new route used to show a create-form using CBT
     path('gems/create/', views.GemCreate.as_view(), name='gems_create'),
-    
+    path('gems/<int:pk>/update/', views.GemUpdate.as_view(), name='gems_update'),
+    path('gems/<int:pk>/delete/', views.GemDelete.as_view(), name='gems_delete'),
 ]

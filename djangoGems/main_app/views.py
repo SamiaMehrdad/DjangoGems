@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Gem
 
 # Create your views here.
@@ -26,3 +26,12 @@ class GemCreate(CreateView):
   model = Gem
   fields = '__all__'  
   success_url = '/gems/'
+
+class GemUpdate(UpdateView):
+  model = Gem
+  # Let's disallow the renaming of a gem by excluding the name field!
+  fields = ['theme', 'description', 'price_range', 'hardness']
+
+class GemDelete(DeleteView):
+  model = Gem
+  success_url = '/gems/'  

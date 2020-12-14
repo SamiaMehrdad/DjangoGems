@@ -90,6 +90,13 @@ Implement Django class-based views
 *Note: All CBVs by default will use a folder inside of the templates folder with a name the same as the app, in our case main_app.
 
 `$ mkdir main_app/templates/main_app`<br>
-`$ touch main_app/templates/main_app/cat_form.html`
+`$ touch main_app/templates/main_app/gem_form.html`
 
 Use default Django `{{form.as_table}}` for data entry form.
+
+---
+### STEP 12:
+Update and Delete functionalities
+
+After adding path and methods for update and delete, realize that Django needs a delete confirmation form.<br>
+`$ touch main_app/templates/main_app/gem_confirm_delete.html`
